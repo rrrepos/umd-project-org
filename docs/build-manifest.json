@@ -8,6 +8,10 @@
       "bytes": 18553,
       "imports": []
     },
+    "assets/css/quill.snow.css": {
+      "bytes": 26619,
+      "imports": []
+    },
     "_snowpack/pkg/@zipjs/zipjs.js": {
       "bytes": 274459,
       "imports": []
@@ -20,10 +24,6 @@
           "kind": "import-statement"
         }
       ]
-    },
-    "assets/css/quill.snow.css": {
-      "bytes": 26619,
-      "imports": []
     },
     "_snowpack/pkg/common/_commonjsHelpers-8c19dec8.js": {
       "bytes": 838,
@@ -133,12 +133,8 @@
       ]
     },
     "assets/js/modules/builder.js": {
-      "bytes": 26221,
+      "bytes": 26186,
       "imports": [
-        {
-          "path": "assets/css/quill.snow.css",
-          "kind": "import-statement"
-        },
         {
           "path": "_snowpack/pkg/quill.js",
           "kind": "import-statement"
@@ -221,6 +217,15 @@
       },
       "bytes": 16339
     },
+    "../~~bundle~~/assets/css/quill.snow.css": {
+      "imports": [],
+      "inputs": {
+        "assets/css/quill.snow.css": {
+          "bytesInOutput": 22053
+        }
+      },
+      "bytes": 22054
+    },
     "../~~bundle~~/assets/js/app.js": {
       "imports": [],
       "exports": [],
@@ -251,9 +256,6 @@
         },
         "umd-core/Umd.js": {
           "bytesInOutput": 5611
-        },
-        "assets/css/quill.snow.css": {
-          "bytesInOutput": 0
         },
         "_snowpack/pkg/common/_commonjsHelpers-8c19dec8.js": {
           "bytesInOutput": 482
@@ -288,15 +290,6 @@
       },
       "bytes": 542250
     },
-    "../~~bundle~~/assets/js/app.css": {
-      "imports": [],
-      "inputs": {
-        "assets/css/quill.snow.css": {
-          "bytesInOutput": 22053
-        }
-      },
-      "bytes": 22054
-    },
     "../~~bundle~~/assets/js/electron.js": {
       "imports": [],
       "exports": [],
@@ -327,9 +320,6 @@
         },
         "umd-core/Umd.js": {
           "bytesInOutput": 5611
-        },
-        "assets/css/quill.snow.css": {
-          "bytesInOutput": 0
         },
         "_snowpack/pkg/common/_commonjsHelpers-8c19dec8.js": {
           "bytesInOutput": 482
@@ -363,15 +353,6 @@
         }
       },
       "bytes": 542407
-    },
-    "../~~bundle~~/assets/js/electron.css": {
-      "imports": [],
-      "inputs": {
-        "assets/css/quill.snow.css": {
-          "bytesInOutput": 22053
-        }
-      },
-      "bytes": 22054
     }
   }
 }

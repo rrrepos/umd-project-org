@@ -1,4 +1,3 @@
-import "../../css/quill.snow.css";
 import Quill from "quill";
 
 import Component from "./component.js";

@@ -153,7 +153,7 @@ var vl=Object.create,Rn=Object.defineProperty,gl=Object.getPrototypeOf,yl=Object
 
     </style>
     <div class="html"></html>
-`;var qi=class extends HTMLElement{static get observedAttributes(){return["data-text","data-url"]}constructor(){super();this._shadowRoot=this.attachShadow({mode:"closed"}),this._shadowRoot.appendChild(Ws.content.cloneNode(!0))}connectedCallback(){}attributeChangedCallback(e,t,n){switch(n=n==="undefined"?"":n,e){case"data-text":n&&this._convertText(n);break;case"data-url":n&&this._loadFile(n);break;default:break}}_convertText(e){let t=new Oi;this._shadowRoot.querySelector(".html").innerHTML=t.render(e)}_loadFile(e){fetch(e).then(t=>t.text()).then(t=>{this._convertText(t)})}disconnectedCallback(){}},PV=new Oi;window.customElements.define("umd-component-md",qi)});var Xs=$t(VH=>{Wt(VH,{UmdComponentPdf:()=>Ci});var Ys=document.createElement("template");Ys.innerHTML=`
+`;var qi=class extends HTMLElement{static get observedAttributes(){return["data-text","data-url"]}constructor(){super();this._shadowRoot=this.attachShadow({mode:"closed"}),this._shadowRoot.appendChild(Ws.content.cloneNode(!0))}connectedCallback(){}attributeChangedCallback(e,t,n){switch(n=n==="undefined"?"":n,e){case"data-text":n&&this._convertText(n);break;case"data-url":n&&this._loadFile(n);break;default:break}}_convertText(e){let t=new Oi;this._shadowRoot.querySelector(".html").innerHTML=t.render(e)}_loadFile(e){fetch(e).then(t=>t.text()).then(t=>{this._convertText(t)})}disconnectedCallback(){}},IV=new Oi;window.customElements.define("umd-component-md",qi)});var Xs=$t(VH=>{Wt(VH,{UmdComponentPdf:()=>Ci});var Ys=document.createElement("template");Ys.innerHTML=`
     <style>
     :host {
         display:grid;
