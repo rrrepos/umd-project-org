@@ -1,7 +1,7 @@
 {
   "inputs": {
     "assets/css/style.css": {
-      "bytes": 21108,
+      "bytes": 21101,
       "imports": []
     },
     "assets/css/app.css": {
@@ -207,10 +207,10 @@
       "imports": [],
       "inputs": {
         "assets/css/style.css": {
-          "bytesInOutput": 12419
+          "bytesInOutput": 12405
         }
       },
-      "bytes": 12420
+      "bytes": 12406
     },
     "../~~bundle~~/assets/css/app.css": {
       "imports": [],

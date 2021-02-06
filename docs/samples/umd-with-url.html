@@ -1,0 +1,22 @@
+<html><head>
+        <script src="../components/umd-viewer-wc.min.js"></script>
+    </head>
+    <body>
+        <div style="display:grid; grid-template-rows: max-content; grid-template-columns: max-content; grid-row-gap: 0.8rem; justify-items: center; justify-content: center">
+            <h2>Demo of UMD with url</h2>
+            <input id="url" type="text">
+            <button>Submit</button>
+            <hr>
+            <umd-viewer style="width:100%"></umd-viewer>
+        </div>
+        <script>
+            document.querySelector("button").onclick = function(e) {
+                const _url = document.querySelector("#url").value;
+                if(_url) {
+                    document.querySelector("umd-viewer").url = _url;
+                }
+            }
+        </script>
+
+    
+</body></html>

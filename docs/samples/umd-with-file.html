@@ -1,0 +1,21 @@
+<html><head>
+        <script src="../components/umd-viewer-wc.min.js"></script>
+    </head>
+    <body>
+        <div style="display:grid; grid-template-rows: max-content; grid-template-columns: max-content; grid-row-gap: 0.8rem; justify-items: center; justify-content: center">
+            <h2>Demo of UMD with file input</h2>
+            <input id="file" type="file" accept=".umd">
+            <hr>
+            <umd-viewer style="width:100%"></umd-viewer>
+        </div>
+        <script>
+            document.querySelector("#file").onchange = function(e) {
+                const _file = document.querySelector("#file").files[0];
+                if(_file) {
+                    document.querySelector("umd-viewer").file = _file;
+                }
+            }
+        </script>
+
+    
+</body></html>
