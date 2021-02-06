@@ -6,7 +6,8 @@ module.exports = {
         target: 'es2018',
     },
     buildOptions: {
-        out: "docs"
+        out: "docs",
+        clean: false
     },
     mount: {
         "src": "/",

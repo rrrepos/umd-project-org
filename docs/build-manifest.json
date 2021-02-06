@@ -1,5 +1,9 @@
 {
   "inputs": {
+    "assets/css/check.css": {
+      "bytes": 21101,
+      "imports": []
+    },
     "assets/css/style.css": {
       "bytes": 21101,
       "imports": []
@@ -199,6 +203,15 @@
     }
   },
   "outputs": {
+    "../~~bundle~~/assets/css/check.css": {
+      "imports": [],
+      "inputs": {
+        "assets/css/check.css": {
+          "bytesInOutput": 12405
+        }
+      },
+      "bytes": 12406
+    },
     "../~~bundle~~/assets/css/style.css": {
       "imports": [],
       "inputs": {
