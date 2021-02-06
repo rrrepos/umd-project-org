@@ -1,0 +1,22 @@
+{
+  "name": "test-electron",
+  "version": "1.0.0",
+  "description": "integration with electron",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "author": "RmR",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "11.2.3",
+    "@zip.js/zip.js": "2.2.1",
+    "file-saver": "2.0.2",
+    "markdown-it": "12.0.2",
+    "quill": "1.3.7",
+    "valid-filename": "3.1.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.11"
+  }
+}
