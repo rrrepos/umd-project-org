@@ -222,7 +222,6 @@ const onPasswordClose = (e) => {
 }
 
 const loadFile = (fileobj, pw) => {
-    console.log("loadfile", fileobj);
     const _umd = new Umd();
     _umd.filename = fileobj.name;
     _umd.password = pw;

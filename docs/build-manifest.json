@@ -163,7 +163,7 @@
       ]
     },
     "assets/js/modules/filer.js": {
-      "bytes": 18825,
+      "bytes": 18787,
       "imports": [
         {
           "path": "umd-core/Umd.js",
@@ -280,13 +280,13 @@
           "bytesInOutput": 2399
         },
         "assets/js/modules/filer.js": {
-          "bytesInOutput": 8424
+          "bytesInOutput": 8398
         },
         "assets/js/app.js": {
           "bytesInOutput": 73
         }
       },
-      "bytes": 542276
+      "bytes": 542250
     },
     "../~~bundle~~/assets/js/app.css": {
       "imports": [],
@@ -356,13 +356,13 @@
           "bytesInOutput": 2399
         },
         "assets/js/modules/filer.js": {
-          "bytesInOutput": 8424
+          "bytesInOutput": 8398
         },
         "assets/js/electron.js": {
           "bytesInOutput": 230
         }
       },
-      "bytes": 542433
+      "bytes": 542407
     },
     "../~~bundle~~/assets/js/electron.css": {
       "imports": [],
