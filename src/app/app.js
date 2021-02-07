@@ -1,5 +1,9 @@
-// app.js
+"use strict"
+// editor.js
 //
+// css
+import "./app.css";
+// modules
 import * as filer from "./modules/filer.js";
 
 const setSw = () => {
@@ -19,5 +23,5 @@ document.querySelector(".main-container").removeAttribute("hidden");
 //
 filer.setEvents();
 // 
-//setSw();
+setSw();
 //

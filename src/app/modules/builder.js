@@ -1,5 +1,6 @@
+import "../quill.snow.css";
 import Quill from "quill";
-//const validFilename = require('valid-filename');
+const validFilename = require('valid-filename');
 
 import Component from "./component.js";
 

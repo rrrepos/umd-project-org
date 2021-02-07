@@ -1,0 +1,195 @@
+(self["webpackChunkumd_project"] = self["webpackChunkumd_project"] || []).push([[302],{
+
+/***/ 9302:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "UmdComponentAudio": () => /* binding */ UmdComponentAudio
+/* harmony export */ });
+/* harmony import */ var _loader_umd_loader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1287);
+// umd-component-audio.js
+//
+// creates an audio component
+//
+// imports
+
+
+//
+// create a template
+const template = document.createElement('template');
+template.innerHTML = `
+    <style>
+    :host {
+        min-height: 3.2rem;
+        display: grid;
+        grid-template-rows: max-content;
+        grid-template-columns: auto;
+        align-items: center;
+    }
+    :host([disabled]) {
+        color: var(--theme-message-color);    
+    }
+
+    :host([hidden]) {
+        display:none;
+    }  
+
+    .loader, .audio {
+        grid-row: 1;
+        grid-column:1;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .audio {
+        outline: none;
+        border: 0;
+    }
+
+    .audio:focus {
+        outline: none;
+        border: 0;
+    }
+
+    </style>
+    <audio class="audio" controls controlsList="nodownload" hidden>Audio</audio>
+    <umd-loader class="loader" hidden></umd-loader>
+`
+
+// create the custom element
+class UmdComponentAudio extends HTMLElement {
+    static get observedAttributes() {
+        return ['data-url'];
+    }
+
+
+    constructor() {
+        super();
+        this._shadowRoot = this.attachShadow({ mode: 'closed' });
+        this._shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
+    // on adding to the DOM
+    connectedCallback() {
+    }
+
+    // attribute change
+    attributeChangedCallback(name, oldVal, newVal) {
+        newVal = (newVal === "undefined") ? '' : newVal;
+        switch (name) {
+            case 'data-url':
+                if (newVal) {
+                    this._setAudio(newVal);
+                }
+                break;
+
+           default:
+                break;
+        }
+    }
+
+    async _setAudio(url) {
+        const _loader = this._shadowRoot.querySelector('.loader');
+        const _audio = this._shadowRoot.querySelector('audio');
+        _loader.removeAttribute('hidden');
+        _audio.onloadeddata = function () {
+            _audio.removeAttribute('hidden');
+            _loader.setAttribute('hidden', '');
+        };
+        _audio.src = url;
+    }
+
+    stopAudio() {
+        const _ele = this._shadowRoot.querySelector('audio');
+        if (_ele) _ele.src = '';
+    }
+
+    // on being removed from DOM
+    disconnectedCallback() {
+    }
+}
+// register component 
+window.customElements.define('umd-component-audio', UmdComponentAudio);
+
+/***/ }),
+
+/***/ 1287:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* unused harmony export UmdLoader */
+// umd-loader.js
+//
+// creates a standard loader
+//
+//
+// create a template
+const template = document.createElement('template');
+template.innerHTML = `
+    <style>
+    :host {
+        display: inline-block;
+        width: 3.6rem;
+        height: 3.6rem;
+        background-repeat: no-repeat;
+        background-size: 2.4rem 2.4rem;
+        background-position: center;
+        line-height: 3.6rem;
+        font-size: var(--theme-font-size-S);
+        font-weight: var(--theme-font-weight-normal);
+        color: var(--theme-text-color);
+        text-align: center;
+        justify-self:center;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbG9hZGVyIj48bGluZSB4MT0iMTIiIHkxPSIyIiB4Mj0iMTIiIHkyPSI2Ij48L2xpbmU+PGxpbmUgeDE9IjEyIiB5MT0iMTgiIHgyPSIxMiIgeTI9IjIyIj48L2xpbmU+PGxpbmUgeDE9IjQuOTMiIHkxPSI0LjkzIiB4Mj0iNy43NiIgeTI9IjcuNzYiPjwvbGluZT48bGluZSB4MT0iMTYuMjQiIHkxPSIxNi4yNCIgeDI9IjE5LjA3IiB5Mj0iMTkuMDciPjwvbGluZT48bGluZSB4MT0iMiIgeTE9IjEyIiB4Mj0iNiIgeTI9IjEyIj48L2xpbmU+PGxpbmUgeDE9IjE4IiB5MT0iMTIiIHgyPSIyMiIgeTI9IjEyIj48L2xpbmU+PGxpbmUgeDE9IjQuOTMiIHkxPSIxOS4wNyIgeDI9IjcuNzYiIHkyPSIxNi4yNCI+PC9saW5lPjxsaW5lIHgxPSIxNi4yNCIgeTE9IjcuNzYiIHgyPSIxOS4wNyIgeTI9IjQuOTMiPjwvbGluZT48L3N2Zz4=");
+        animation: rotation 2s infinite linear;
+      }
+
+      :host([hidden]) {
+          display:none;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+        }
+      
+        to {
+          transform: rotate(359deg);
+          -ms-transform: rotate(359deg);
+          -moz-transform: rotate(359deg);
+        }
+      }
+    </style>
+`
+
+// create the custom element
+class UmdLoader extends HTMLElement {
+  static get observedAttributes() {
+    return [];
+  }
+
+  constructor() {
+    super();
+    this._shadowRoot = this.attachShadow({ mode: 'closed' });
+    this._shadowRoot.appendChild(template.content.cloneNode(true));
+  }
+
+  // on adding to the DOM
+  connectedCallback() {
+  }
+
+
+  // on being removed from DOM
+  disconnectedCallback() {
+  }
+}
+// register component 
+window.customElements.define('umd-loader', UmdLoader);
+
+/***/ })
+
+}]);

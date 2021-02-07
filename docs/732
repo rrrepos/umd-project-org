@@ -1,0 +1,267 @@
+(self["webpackChunkumd_project"] = self["webpackChunkumd_project"] || []).push([[732],{
+
+/***/ 1287:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* unused harmony export UmdLoader */
+// umd-loader.js
+//
+// creates a standard loader
+//
+//
+// create a template
+const template = document.createElement('template');
+template.innerHTML = `
+    <style>
+    :host {
+        display: inline-block;
+        width: 3.6rem;
+        height: 3.6rem;
+        background-repeat: no-repeat;
+        background-size: 2.4rem 2.4rem;
+        background-position: center;
+        line-height: 3.6rem;
+        font-size: var(--theme-font-size-S);
+        font-weight: var(--theme-font-weight-normal);
+        color: var(--theme-text-color);
+        text-align: center;
+        justify-self:center;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbG9hZGVyIj48bGluZSB4MT0iMTIiIHkxPSIyIiB4Mj0iMTIiIHkyPSI2Ij48L2xpbmU+PGxpbmUgeDE9IjEyIiB5MT0iMTgiIHgyPSIxMiIgeTI9IjIyIj48L2xpbmU+PGxpbmUgeDE9IjQuOTMiIHkxPSI0LjkzIiB4Mj0iNy43NiIgeTI9IjcuNzYiPjwvbGluZT48bGluZSB4MT0iMTYuMjQiIHkxPSIxNi4yNCIgeDI9IjE5LjA3IiB5Mj0iMTkuMDciPjwvbGluZT48bGluZSB4MT0iMiIgeTE9IjEyIiB4Mj0iNiIgeTI9IjEyIj48L2xpbmU+PGxpbmUgeDE9IjE4IiB5MT0iMTIiIHgyPSIyMiIgeTI9IjEyIj48L2xpbmU+PGxpbmUgeDE9IjQuOTMiIHkxPSIxOS4wNyIgeDI9IjcuNzYiIHkyPSIxNi4yNCI+PC9saW5lPjxsaW5lIHgxPSIxNi4yNCIgeTE9IjcuNzYiIHgyPSIxOS4wNyIgeTI9IjQuOTMiPjwvbGluZT48L3N2Zz4=");
+        animation: rotation 2s infinite linear;
+      }
+
+      :host([hidden]) {
+          display:none;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+        }
+      
+        to {
+          transform: rotate(359deg);
+          -ms-transform: rotate(359deg);
+          -moz-transform: rotate(359deg);
+        }
+      }
+    </style>
+`
+
+// create the custom element
+class UmdLoader extends HTMLElement {
+  static get observedAttributes() {
+    return [];
+  }
+
+  constructor() {
+    super();
+    this._shadowRoot = this.attachShadow({ mode: 'closed' });
+    this._shadowRoot.appendChild(template.content.cloneNode(true));
+  }
+
+  // on adding to the DOM
+  connectedCallback() {
+  }
+
+
+  // on being removed from DOM
+  disconnectedCallback() {
+  }
+}
+// register component 
+window.customElements.define('umd-loader', UmdLoader);
+
+/***/ }),
+
+/***/ 1732:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "UmdComponentVideo": () => /* binding */ UmdComponentVideo
+/* harmony export */ });
+/* harmony import */ var _loader_umd_loader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1287);
+// umd-component-video.js
+//
+// displays video
+//
+// imports
+
+
+//
+// create a template
+const template = document.createElement("template");
+template.innerHTML = `
+    <style>
+      :host {
+        display:grid;
+        grid-template-rows: max-content;
+        grid-template-columns: auto;
+      }
+
+      :host([hidden]) {
+        display:none;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .dummy {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      iframe {
+        grid-row: 1;
+        grid-column:1;
+        object-fit: contain;
+        width:100%;
+      }
+
+      .video {
+        grid-row: 1;
+        grid-column:1;
+        object-fit: contain;
+        width:100%;
+      }
+  
+      .loader {
+        grid-row:1;
+        grid-column:1;
+        align-self: center;
+        justify-self: center;
+      }
+
+    </style>
+    <video class="video" controls hidden></video>
+    <iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen hidden></iframe>
+    <umd-loader class="loader" hidden></umd-loader>
+`
+
+// create the custom element
+class UmdComponentVideo extends HTMLElement {
+  static get observedAttributes() {
+    return ["data-source", "data-url", "data-aspect"];
+  }
+
+  constructor() {
+    super();
+    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadowRoot.appendChild(template.content.cloneNode(true));
+
+
+    const observer = new IntersectionObserver((entry, observer) => {
+      this._calibrateWH();
+    });
+
+    observer.observe(this._shadowRoot.querySelector("iframe"));
+  }
+
+  // on adding to the DOM
+  connectedCallback() {
+    this._loadVideo();
+  }
+
+  _loadVideo() {
+    this._shadowRoot.querySelector("video").setAttribute("hidden", "");
+    this._shadowRoot.querySelector("iframe").setAttribute("hidden", "");
+    // get the attributes
+    const _url = this.getAttribute("data-url");
+    // check if url provided
+    if (!_url) return;
+
+    let _source = "embed"; // default
+    if (this.getAttribute("data-source")) {
+      _source = this.getAttribute("data-source");
+    }
+
+    switch (_source) {
+
+      case "embed":
+        this._loadEmbedVideo(_url);
+        break;
+     case "include":
+       this._loadIncludeVideo(_url);   
+    }
+  }
+
+  _calibrateWH() {
+    const _video = this._shadowRoot.querySelector("iframe");
+
+    // calibrate h and w
+    const w = this.offsetWidth;
+    const _aspect = this.getAttribute("data-aspect");
+    let h2w = 9 / 16;
+    if (_aspect) {
+      const _aspectarr = _aspect.split(":");
+      if (_aspectarr.length == 2) {
+        const _aspectW = parseInt(_aspectarr[0]);
+        const _aspectH = parseInt(_aspectarr[1]);
+        if (_aspectW != 0 && _aspectH != 0) {
+          h2w = _aspectH / _aspectW;
+        }
+      }
+    }
+    let h = parseInt(w * h2w);
+    _video.setAttribute("width", `${w}px`);
+    _video.setAttribute("height", `${h}px`);
+  }
+
+  _loadEmbedVideo(url) {
+    const _loader = this._shadowRoot.querySelector(".loader");
+    const _video = this._shadowRoot.querySelector("iframe");
+
+    _loader.removeAttribute("hidden");
+    _video.addEventListener("load", function (e) {
+      _loader.setAttribute("hidden", "hidden");
+      _video.removeAttribute("hidden");
+    });
+
+    _video.addEventListener("error", function (e) {
+      _loader.setAttribute("hidden", "hidden");
+    });
+    _video.src = url;
+  }
+
+  _loadIncludeVideo(url) {
+    const _loader = this._shadowRoot.querySelector(".loader");
+    const _video = this._shadowRoot.querySelector("video");
+
+    _loader.removeAttribute("hidden");
+    _video.addEventListener("loadeddata", function (e) {
+      _loader.setAttribute("hidden", "hidden");
+      _video.removeAttribute("hidden");
+    });
+
+    _video.addEventListener("error", function (e) {
+      _loader.setAttribute("hidden", "hidden");
+    });
+    _video.src = url;
+  }
+
+
+  stopVideo() {
+    this._shadowRoot.querySelector("iframe").src = "";
+    this._shadowRoot.querySelector(".video").src = "";
+  }
+
+  // attribute change
+  attributeChangedCallback(name, oldVal, newVal) {
+  }
+
+  // on being removed from DOM
+  disconnectedCallback() {
+  }
+}
+// register component 
+window.customElements.define("umd-component-video", UmdComponentVideo);
+
+/***/ })
+
+}]);

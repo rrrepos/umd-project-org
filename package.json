@@ -1,15 +1,15 @@
 {
-  "name": "test-electron",
-  "version": "1.0.0",
-  "description": "integration with electron",
+  "name": "umd-project",
+  "version": "0.4.2",
+  "description": "code for umd-project",
+  "private": "true",
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "watch": "webpack --watch"
   },
-  "author": "RmR",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "",
   "dependencies": {
-    "electron": "11.2.3",
     "@zip.js/zip.js": "2.2.1",
     "file-saver": "2.0.2",
     "markdown-it": "12.0.2",
@@ -17,6 +17,12 @@
     "valid-filename": "3.1.0"
   },
   "devDependencies": {
-    "snowpack": "^3.0.11"
+    "@google-cloud/functions-framework": "^1.7.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^5.0.1",
+    "file-loader": "6.2.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
   }
 }
