@@ -1,6 +1,6 @@
 {
-    "name": "UMD Editor",
-    "short_name": "UMD Editor",
+    "name": "UMD App",
+    "short_name": "UMD App",
     "background_color": "#1e1e1e",
     "display": "standalone",
     "orientation": "portrait",

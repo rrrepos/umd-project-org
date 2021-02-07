@@ -1,8 +1,4 @@
 // drive.js
-//
-// import css
-import "../css/base.css";
-import "./drive.css";
 
 // check if doclink has beens sent via url
 const getQueryString = (field) => {

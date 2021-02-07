@@ -2,7 +2,8 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    "app/app.min.js": ["./src/app/app.js"],
+    "app/app.min.js": ["./src/js/app.js"],
+    "electron/electron.min.js": ["./src/js/electron.js"],
     "components/umd-viewer-wc.min.js": ["./src/umd-viewer-wc/umd-viewer.js"]
   },
   output: {

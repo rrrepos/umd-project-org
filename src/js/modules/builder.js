@@ -1,4 +1,3 @@
-import "../quill.snow.css";
 import Quill from "quill";
 const validFilename = require('valid-filename');
 

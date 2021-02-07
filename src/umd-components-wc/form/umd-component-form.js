@@ -110,7 +110,6 @@ export class UmdComponentForm extends HTMLElement {
     const _url = new URL(url);
     const _origin = _url.origin.toLowerCase();
     const _pathname = _url.pathname;
-    console.log(_origin);
     switch(_origin) {
         case "https://docs.google.form":
         case "https://forms.gle":

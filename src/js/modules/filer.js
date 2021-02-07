@@ -111,7 +111,7 @@ const openButton = (e) => {
 const fileChange = (e) => {
     const _fileobj = document.querySelector("[file-input]").files[0];
     if (_fileobj) {
-        document.querySelector("[open-button").innerHTML = "loading ...";
+        document.querySelector("[open-button]").innerHTML = "loading ...";
         loadFile(_fileobj, ""); // initially pass the pw as blank
     }
 }
@@ -119,9 +119,7 @@ const fileChange = (e) => {
 const openUrl = (e) => {
     const _ele = document.querySelector("[url-input]");
     if (!_ele.value) return;
-    console.log(1, _ele.value);
     const _url = parseUrl(_ele.value);
-    console.log(2, _url);
     if (!_url) return;
 
     let _filename = "untitled";
@@ -552,7 +550,7 @@ const loadDriveFile = (e) => {
     const _fileobj = e.detail.file;
     document.querySelector("#tab-new").click();
     if (_fileobj) {
-        document.querySelector("[open-button").innerHTML = "loading ...";
+        document.querySelector("[open-button]").innerHTML = "loading ...";
         loadFile(_fileobj, "");
     }
 }
@@ -571,4 +569,4 @@ const generateId = () => {
     return `${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export { setEvents }
+export { setEvents, loadFile }
