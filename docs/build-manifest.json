@@ -1,15 +1,15 @@
 {
   "inputs": {
     "assets/css/style.css": {
-      "bytes": 21101,
+      "bytes": 12406,
       "imports": []
     },
     "assets/css/app.css": {
-      "bytes": 18553,
+      "bytes": 16339,
       "imports": []
     },
     "assets/css/quill.snow.css": {
-      "bytes": 26619,
+      "bytes": 22054,
       "imports": []
     },
     "_snowpack/pkg/@zipjs/zipjs.js": {

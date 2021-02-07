@@ -10,6 +10,7 @@ module.exports = {
         clean: false
     },
     mount: {
+        "public": "/docs",
         "src": "/",
     },
     packageOptions: {
