@@ -1,9 +1,5 @@
 {
   "inputs": {
-    "assets/css/check.css": {
-      "bytes": 21101,
-      "imports": []
-    },
     "assets/css/style.css": {
       "bytes": 21101,
       "imports": []
@@ -103,8 +99,8 @@
         }
       ]
     },
-    "assets/js/modules/component.js": {
-      "bytes": 6843,
+    "js/modules/component.js": {
+      "bytes": 6822,
       "imports": [
         {
           "path": "umd-components-wc/audio/umd-component-audio.js",
@@ -136,25 +132,25 @@
         }
       ]
     },
-    "assets/js/modules/builder.js": {
-      "bytes": 26186,
+    "js/modules/builder.js": {
+      "bytes": 26228,
       "imports": [
         {
           "path": "_snowpack/pkg/quill.js",
           "kind": "import-statement"
         },
         {
-          "path": "assets/js/modules/component.js",
+          "path": "js/modules/component.js",
           "kind": "import-statement"
         }
       ]
     },
-    "assets/js/modules/drive.js": {
+    "js/modules/drive.js": {
       "bytes": 5342,
       "imports": []
     },
     "_snowpack/pkg/file-saver.js": {
-      "bytes": 2666,
+      "bytes": 2690,
       "imports": [
         {
           "path": "_snowpack/pkg/common/_commonjsHelpers-8c19dec8.js",
@@ -162,19 +158,19 @@
         }
       ]
     },
-    "assets/js/modules/filer.js": {
-      "bytes": 18787,
+    "js/modules/filer.js": {
+      "bytes": 18399,
       "imports": [
         {
           "path": "umd-core/Umd.js",
           "kind": "import-statement"
         },
         {
-          "path": "assets/js/modules/builder.js",
+          "path": "js/modules/builder.js",
           "kind": "import-statement"
         },
         {
-          "path": "assets/js/modules/drive.js",
+          "path": "js/modules/drive.js",
           "kind": "import-statement"
         },
         {
@@ -183,35 +179,17 @@
         }
       ]
     },
-    "assets/js/app.js": {
-      "bytes": 692,
+    "js/app.js": {
+      "bytes": 608,
       "imports": [
         {
-          "path": "assets/js/modules/filer.js",
-          "kind": "import-statement"
-        }
-      ]
-    },
-    "assets/js/electron.js": {
-      "bytes": 535,
-      "imports": [
-        {
-          "path": "assets/js/modules/filer.js",
+          "path": "js/modules/filer.js",
           "kind": "import-statement"
         }
       ]
     }
   },
   "outputs": {
-    "../~~bundle~~/assets/css/check.css": {
-      "imports": [],
-      "inputs": {
-        "assets/css/check.css": {
-          "bytesInOutput": 12405
-        }
-      },
-      "bytes": 12406
-    },
     "../~~bundle~~/assets/css/style.css": {
       "imports": [],
       "inputs": {
@@ -239,7 +217,7 @@
       },
       "bytes": 22054
     },
-    "../~~bundle~~/assets/js/app.js": {
+    "../~~bundle~~/js/app.js": {
       "imports": [],
       "exports": [],
       "inputs": {
@@ -265,18 +243,18 @@
           "bytesInOutput": 2987
         },
         "_snowpack/pkg/@zipjs/zipjs.js": {
-          "bytesInOutput": 135563
+          "bytesInOutput": 135566
         },
         "umd-core/Umd.js": {
           "bytesInOutput": 5611
         },
         "_snowpack/pkg/common/_commonjsHelpers-8c19dec8.js": {
-          "bytesInOutput": 482
+          "bytesInOutput": 475
         },
         "_snowpack/pkg/quill.js": {
           "bytesInOutput": 239390
         },
-        "assets/js/modules/component.js": {
+        "js/modules/component.js": {
           "bytesInOutput": 4042
         },
         "umd-components-wc/loader/umd-loader.js": {
@@ -285,87 +263,23 @@
         "_snowpack/pkg/markdown-it.js": {
           "bytesInOutput": 112873
         },
-        "assets/js/modules/builder.js": {
-          "bytesInOutput": 14377
+        "js/modules/builder.js": {
+          "bytesInOutput": 14405
         },
-        "assets/js/modules/drive.js": {
+        "js/modules/drive.js": {
           "bytesInOutput": 2299
         },
         "_snowpack/pkg/file-saver.js": {
-          "bytesInOutput": 2399
+          "bytesInOutput": 2406
         },
-        "assets/js/modules/filer.js": {
-          "bytesInOutput": 8398
+        "js/modules/filer.js": {
+          "bytesInOutput": 8387
         },
-        "assets/js/app.js": {
+        "js/app.js": {
           "bytesInOutput": 73
         }
       },
-      "bytes": 542250
-    },
-    "../~~bundle~~/assets/js/electron.js": {
-      "imports": [],
-      "exports": [],
-      "inputs": {
-        "umd-components-wc/audio/umd-component-audio.js": {
-          "bytesInOutput": 1573
-        },
-        "umd-components-wc/form/umd-component-form.js": {
-          "bytesInOutput": 1977
-        },
-        "umd-components-wc/image/umd-component-image.js": {
-          "bytesInOutput": 1541
-        },
-        "umd-components-wc/md/umd-component-md.js": {
-          "bytesInOutput": 1875
-        },
-        "umd-components-wc/pdf/umd-component-pdf.js": {
-          "bytesInOutput": 2177
-        },
-        "umd-components-wc/text/umd-component-text.js": {
-          "bytesInOutput": 1534
-        },
-        "umd-components-wc/video/umd-component-video.js": {
-          "bytesInOutput": 2987
-        },
-        "_snowpack/pkg/@zipjs/zipjs.js": {
-          "bytesInOutput": 135563
-        },
-        "umd-core/Umd.js": {
-          "bytesInOutput": 5611
-        },
-        "_snowpack/pkg/common/_commonjsHelpers-8c19dec8.js": {
-          "bytesInOutput": 482
-        },
-        "_snowpack/pkg/quill.js": {
-          "bytesInOutput": 239390
-        },
-        "assets/js/modules/component.js": {
-          "bytesInOutput": 4042
-        },
-        "umd-components-wc/loader/umd-loader.js": {
-          "bytesInOutput": 2130
-        },
-        "_snowpack/pkg/markdown-it.js": {
-          "bytesInOutput": 112873
-        },
-        "assets/js/modules/builder.js": {
-          "bytesInOutput": 14377
-        },
-        "assets/js/modules/drive.js": {
-          "bytesInOutput": 2299
-        },
-        "_snowpack/pkg/file-saver.js": {
-          "bytesInOutput": 2399
-        },
-        "assets/js/modules/filer.js": {
-          "bytesInOutput": 8398
-        },
-        "assets/js/electron.js": {
-          "bytesInOutput": 230
-        }
-      },
-      "bytes": 542407
+      "bytes": 542270
     }
   }
 }

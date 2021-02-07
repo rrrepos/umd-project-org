@@ -1,7 +1,0 @@
-include: [".well-known"]
-title: UMD Project
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
