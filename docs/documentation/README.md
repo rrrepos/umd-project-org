@@ -1,13 +1,13 @@
 ---
 layout: default
 title: UMD Project: Documentation
-permalink: /documentation/
+permalink: index.html
 ---
 [Back](../)
 <br/>
 
 ## Documentation
-This section will provide more details of the UMD project.
+This section will provide more details of the UMD project. Will this work
 
 ### About UMD
 #### What is UMD
