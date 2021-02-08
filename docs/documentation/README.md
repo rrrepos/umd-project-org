@@ -1,6 +1,7 @@
 ---
 layout: default
 title: UMD Project: Documentation
+permalink: /index.html
 ---
 [Back](../)
 <br/>
