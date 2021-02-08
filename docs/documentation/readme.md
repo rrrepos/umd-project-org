@@ -1,6 +1,4 @@
 ---
-layout: default
-title: UMD Project: Documentation
 ---
 [Back](../)
 <br/>
