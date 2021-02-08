@@ -1,5 +1,5 @@
 var TIMEOUT = 400;
-var CACHE = "umd-0.4.3.6";
+var CACHE = "umd-0.4.4";
 
 var precacheList = [
   "/assets/images/logo-300x300.png",
@@ -26,7 +26,9 @@ var cacheNetworkList = [
   "/app/app.min.js", 
   "/examples.html",
   "/documentation.html",
-  "/developers.html"
+  "/developers.html",
+  "/electron",
+  "/electron/"
 ];
 
 var networkCacheList = [

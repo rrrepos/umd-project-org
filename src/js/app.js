@@ -18,5 +18,5 @@ document.querySelector(".main-container").removeAttribute("hidden");
 //
 filer.setEvents();
 // 
-//setSw();
+setSw();
 //

@@ -9,6 +9,7 @@ import * as Drive from "./drive.js";
 import { saveAs } from 'file-saver';
 
 let docarr = [];
+let fileobj = null;
 
 // functions related to file-open
 const setEvents = () => {
@@ -18,7 +19,7 @@ const setEvents = () => {
     document.querySelector("[file-input]").addEventListener("change", fileChange);
     document.querySelector("[url-input]").addEventListener("blur", openUrl);
     document.querySelector("[url-input]").addEventListener("keyup", inputKeyup);
-    document.querySelector("[password-input]").addEventListener("blur", onPasswordSet);
+    document.querySelector("[password-input]").addEventListener("blur", onPasswordSet.bind(this));
     document.querySelector("[password-input]").addEventListener("keyup", inputKeyup);
     document.querySelector("[password-close]").addEventListener("click", onPasswordClose);
     document.querySelector("#tab-new").addEventListener("click", switchTab);
@@ -74,6 +75,8 @@ const switchTab = (e) => {
 }
 
 const newButton = (e) => {
+    // reset fileobj
+    fileobj = null;
     const _umd = new Umd();
     _umd.filename = "untitled";
     _umd.password = "";
@@ -85,12 +88,6 @@ const newButton = (e) => {
 
     // add to google analytics
     gtag("event", "new_doc");
-    //ga("send", {
-    //    hitType: "event",
-    //    eventCategory: "action",
-    //    eventAction: "new"
-    //});
-
 }
 
 const openButton = (e) => {
@@ -100,19 +97,14 @@ const openButton = (e) => {
     document.querySelector("[url-input]").value = "";
     document.querySelector("[file-input]").click();
     // analytics
-    //ga("send", {
-    //    hitType: "event",
-    //    eventCategory: "action",
-    //    eventAction: "open-file"
-    //});
     gtag("event", "open_doc");
 }
 
 const fileChange = (e) => {
-    const _fileobj = document.querySelector("[file-input]").files[0];
-    if (_fileobj) {
+    fileobj = document.querySelector("[file-input]").files[0];
+    if (fileobj) {
         document.querySelector("[open-button]").innerHTML = "loading ...";
-        loadFile(_fileobj, ""); // initially pass the pw as blank
+        loadFile(fileobj, ""); // initially pass the pw as blank
     }
 }
 
@@ -139,19 +131,12 @@ const openUrl = (e) => {
             }
         })
         .then(blob => {
-            const _file = new File([blob], _filename, { type: blob.type });
+            fileobj = new File([blob], _filename, { type: blob.type });
             _ele.value = "";
             _ele.removeAttribute("disabled");
-            loadFile(_file);
+            loadFile(fileobj);
             // analytics
-            //ga("send", {
-            //    hitType: "event",
-            //    eventCategory: "action",
-            //    eventAction: "open-url"
-            //});
-
             gtag("event", "open_url");
-
         })
         .catch(_err => {
             _ele.value = _url;
@@ -188,10 +173,9 @@ const inputKeyup = (e) => {
 }
 
 const onPasswordSet = (e) => {
-    const _fileobj = document.querySelector("[file-input]").files[0];
     const _pw = document.querySelector("[password-input").value;
-    if (_fileobj && _pw) {
-        loadFile(_fileobj, _pw); // initially pass the pw as blank
+    if (fileobj && _pw) {
+        loadFile(fileobj, _pw); // initially pass the pw as blank
         // reset screen
         document.querySelector(".filer-container").classList.remove("visuallyhidden");
         document.querySelector(".password-container").classList.add("visuallyhidden");
@@ -206,7 +190,8 @@ const onPasswordClose = (e) => {
     document.querySelector(".password-container").classList.add("visuallyhidden");
 }
 
-const loadFile = (fileobj, pw) => {
+const loadFile = (file, pw) => {
+    fileobj = file;
     const _umd = new Umd();
     _umd.filename = fileobj.name;
     _umd.password = pw;
@@ -547,11 +532,11 @@ const loadDriveFile = (e) => {
     if (!e.detail) return;
     if (!e.detail.file) return;
 
-    const _fileobj = e.detail.file;
+    fileobj = e.detail.file;
     document.querySelector("#tab-new").click();
-    if (_fileobj) {
+    if (fileobj) {
         document.querySelector("[open-button]").innerHTML = "loading ...";
-        loadFile(_fileobj, "");
+        loadFile(fileobj, "");
     }
 }
 
