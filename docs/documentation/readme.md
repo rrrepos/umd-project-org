@@ -6,7 +6,7 @@ title: UMD Project: Documentation
 <br/>
 
 ## Documentation
-This section will provide more details of the UMD project. Will this work
+This section will provide more details of the UMD project.
 
 ### About UMD
 #### What is UMD
