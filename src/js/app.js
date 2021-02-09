@@ -22,6 +22,6 @@ setSw();
 //
 window.addEventListener("message", message => {
     console.log(message.data) // Wayne is coming!!!
-    alert(message.data);
+    alert("received");
     window.ReactNativeWebView.postMessage('Client received data')
   });
