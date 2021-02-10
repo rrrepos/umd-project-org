@@ -35,4 +35,4 @@ const loader = (blob) => {
     alert("not yet again");
 }
 
-window.loader = loader;
+window.upload = filer.loadBlob;
