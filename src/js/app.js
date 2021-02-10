@@ -20,8 +20,8 @@ filer.setEvents();
 // 
 setSw();
 
-document.addEventListener("message", (event) => {
-    alert("1" +message.data);
+document.addEventListener("test", (event) => {
+    alert("1" + event.detail);
 }, false);
 
 window.addEventListener("message", (event) => {
