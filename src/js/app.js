@@ -20,19 +20,8 @@ filer.setEvents();
 // 
 setSw();
 
-document.addEventListener("test", (event) => {
-    alert("1" + event.detail);
-}, false);
-
-window.addEventListener("message", (event) => {
-    alert("2" + message.data);
-}, false);
-
-
 const loader = (blob) => {
-    alert("yet again:");
     filer.loadBlob(blob);
-    alert("not yet again");
 }
 
 window.upload = filer.loadBlob;
