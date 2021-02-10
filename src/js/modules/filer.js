@@ -217,7 +217,7 @@ const loadFile = (file, pw) => {
 
 const loadBlob = (blob) => {
     const _url = URL.createObjectURL(blob);
-    alert("received url:", _url);
+    alert("received blob and url:", _url, blob);
 } 
 
 const addDoc = (file, umd) => {
