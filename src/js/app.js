@@ -20,6 +20,10 @@ filer.setEvents();
 // 
 setSw();
 
+document.addEventListener("message", (event) => {
+    alert("1" +message.data);
+}, false);
+
 window.addEventListener("message", (event) => {
-    alert(message.data);
+    alert("2" + message.data);
 }, false);
