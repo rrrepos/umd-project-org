@@ -216,7 +216,7 @@ const loadFile = (file, pw) => {
 }
 
 const loadBlob = (blob) => {
-    alert("received blob:", blob.length);
+    alert("received blob:", blob);
 } 
 
 const addDoc = (file, umd) => {
