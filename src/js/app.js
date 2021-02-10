@@ -19,3 +19,7 @@ document.querySelector(".main-container").removeAttribute("hidden");
 filer.setEvents();
 // 
 setSw();
+
+window.addEventListener("message", (event) => {
+    alert(message.data);
+}, false);
