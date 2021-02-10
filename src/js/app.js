@@ -32,3 +32,5 @@ window.addEventListener("message", (event) => {
 const check = () => {
     alert("yay");
 }
+
+window.check = check;
