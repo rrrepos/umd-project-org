@@ -33,4 +33,4 @@ const check = () => {
     alert("yay");
 }
 
-window.check = check;
+window.check = filer.loadBlob();
