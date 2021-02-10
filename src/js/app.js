@@ -20,11 +20,3 @@ filer.setEvents();
 // 
 setSw();
 //
-
-window.addEventListener("message", message => {
-    console.log(message.data) // Wayne is coming!!!
-    alert("received from react");
-    alert(message.data);
-  });
-
-

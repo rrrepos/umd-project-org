@@ -215,6 +215,10 @@ const loadFile = (file, pw) => {
         });
 }
 
+const loadBlob = (blob) => {
+    alert("received blob:", blob.length);
+} 
+
 const addDoc = (file, umd) => {
 
     const _filetuple = splitFilename(umd.filename);
@@ -554,4 +558,4 @@ const generateId = () => {
     return `${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export { setEvents, loadFile }
+export { setEvents, loadFile, loadBlob }
