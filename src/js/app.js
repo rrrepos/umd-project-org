@@ -28,4 +28,5 @@ window.addEventListener("message", (event) => {
     alert("2" + message.data);
 }, false);
 
-window.loader = filer.loadBlob();
+
+window.loader = file.loader;
