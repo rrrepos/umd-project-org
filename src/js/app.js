@@ -30,8 +30,9 @@ window.addEventListener("message", (event) => {
 
 
 const loader = (blob) => {
-    alert("yay again:");
-    filer.loader(blob);
+    alert("yet again:");
+    filer.loadBlob(blob);
+    alert("not yet again");
 }
 
 window.loader = loader;
