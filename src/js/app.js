@@ -29,8 +29,9 @@ window.addEventListener("message", (event) => {
 }, false);
 
 
-const check = (message) => {
-    alert("yay again:" + message);
+const loader = (blob) => {
+    alert("yay again:");
+    filer.loader(blob);
 }
 
-window.loader = check;
+window.loader = loader;
