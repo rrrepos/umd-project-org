@@ -27,3 +27,8 @@ document.addEventListener("message", (event) => {
 window.addEventListener("message", (event) => {
     alert("2" + message.data);
 }, false);
+
+
+const check = () => {
+    alert("yay");
+}
